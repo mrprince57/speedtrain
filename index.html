@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Speed Train</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/themes/default/jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/style.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).on("mobileinit", function () {
+                //alert("Hello");
+                $.mobile.defaultPageTransition = ".slide";
+            }); // end on
+        </script>
+        <script src="js/jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div data-role="page" id="home">
+            <div data-role="header" data-position="fixed" data-fullscreen="false">
+                <h1 class="page-header"> Speed Train </h1>
+            </div>
+            <div data-role="content">
+                <a href="#main-menu">
+                    <img src="images/speedtrain1.png"/>
+                </a>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <a href="#main-menu" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="grid" data-iconpos="top">
+                            เมนูหลัก
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#frm-booking" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="edit" data-iconpos="top">
+                            จองที่นั่ง
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="map.html" rel="external" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="eye" data-iconpos="top" data-ajax="false">
+                            ติดตาม
+                        </a>
+                    </div>
+                </div>
+<!--                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <a href="baac.html" rel="external" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="eye" data-iconpos="top">
+                            BAAC
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#frm-input" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="calendar" data-iconpos="top">
+                            Form
+                        </a>
+                    </div>
+                    <div class="ui-block-c">
+                        <a href="test.php" rel="external" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="cloud" data-iconpos="top">
+                            PHP
+                        </a>
+                    </div>
+                </div>-->
+<!--                <div class="ui-grid-b">
+                    <div class="ui-block-a">
+                        <a href="#listview" data-role="button" data-inline="true" 
+                           data-transition="slideup" data-icon="bullets" data-iconpos="top">
+                            List View
+                        </a>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+        <div data-role="page" id="main-menu">
+            <div data-role="header" data-add-back-btn="true" data-back-btn-text="กลับ">
+                <h1 class="page-header"> Main Menu </h1>
+                <!--<a href="#" data-role="button" data-rel="back" data-icon="carat-l" data-iconpos="notext">Back</a>-->
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </div>
+            <div data-role="content">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"></div>
+                    <div class="ui-block-b">
+                        <div data-role="controlgroup" data-mini="false">
+                            <a href="#home" data-role="button" data-icon="home" data-iconpos="left">หน้าหลัก</a>
+                            <a href="#frm-booking" data-role="button" data-icon="edit" data-iconpos="left">จองที่นั่ง</a>
+                            <a href="map.html" rel="external" data-role="button" data-icon="eye" data-iconpos="left">ติดตาม</a>
+                            <a href="baac.html" rel="external" data-role="button" data-icon="eye">BAAC</a>
+                            <a href="#frm-input" data-role="button" data-icon="calendar">Form</a>
+                            <a href="test.php" rel="external" data-role="button" data-icon="cloud">PHP</a>
+                            <a href="#listview" data-role="button" data-icon="bullets">List View</a>
+                        </div>
+                    </div>
+                    <div class="ui-block-c"></div>
+                </div>
+            </div>
+            <div data-role="footer" data-position="fixed">
+                <h2 class="page-footer">&copy; 2558</h2>
+                <a href="#aboutus" data-role="button" data-icon="tag" data-iconpos="notext" class="ui-btn-right" data-rel="dialog">About Us</a>
+            </div>
+        </div>
+        <div data-role="page" id="aboutus">
+            <div data-role="header">
+                <h1>Create by..</h1>
+            </div>
+            <div data-role="content">
+                <img src="images/developer.jpg"/>
+                <p>Mr.PRIN KLINKUL</p>
+                <p>BAAC</p>
+                <p><a href="mailto:prin.baac@gmail.com">prin.baac@gmail.com</a></p>
+            </div>
+        </div>
+        <div data-role="page" id="frm-input">
+            <header data-role="header">
+                <h1>Form</h1>
+            </header>
+            <div data-role="content">
+                <form id="frm1">
+                    <div class="ui-field-contain">
+                        <label for="txt-name">Name:</label>
+                        <input type="text" id="txt-name" placeholder="username" data-clear-btn="true">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-pass">Password:</label>
+                        <input type="password" id="txt-pass" placeholder="******" data-clear-btn="true">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-email">Email:</label>
+                        <input type="email" id="txt-email" placeholder="aaa@abc.com" data-clear-btn="true">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-url">Url:</label>
+                        <input type="url" id="txt-url" placeholder="http://www.google.com" data-clear-btn="true">
+                    </div>   
+                    <div class="ui-field-contain">
+                        <label for="txt-tel">Phone:</label>
+                        <input type="tel" id="txt-tel" maxlength="10" data-clear-btn="true">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-num">Age:</label>
+                        <input type="number" id="txt-num" min="20" max="60" placeholder="xx" data-clear-btn="true">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-date">Arrival Date:</label>
+                        <input type="date" id="txt-date">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-datetime">Data @ Time:</label>
+                        <input type="datetime" id="txt-datetime">
+                    </div>
+                    <div class="ui-alt-icon">
+                        <label for="txt-week">Week:</label>
+                        <input type="week" id="txt-week">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-month">Month:</label>
+                        <input type="month" id="txt-month">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-remark">Remark:</label>
+                        <textarea id="txt-remark"></textarea>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-search">Search:</label>
+                        <input type="search" id="txt-search">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-range">Range:</label>
+                        <input type="range" id="txt-range" min="0" max="10" step="0.5">
+                    </div>
+                    <div class="ui-field-contain">
+                        <div data-role="controlgroup" data-type="horizontal">
+                            <label for="rd1">Bangkok</label>
+                            <input type="radio" id="rd1" name="rd-prv" checked="selected">
+                            <label for="rd2">Nonthaburi</label>
+                            <input type="radio" id="rd2" name="rd-prv">
+                        </div>
+                    </div>
+                    <div class="ui-field-contain">
+                        <div data-role="controlgroup" data-type="horizontal">
+                            <label for="ck1-dst">Jatujak</label>
+                            <input type="checkbox" id="ck1-dst" checked="selected" value="1">
+                            <label for="ck2-dst">Bangsue</label>
+                            <input type="checkbox" id="ck2-dst" value="2">
+                            <label for="ck3-dst">Bangkhen</label>
+                            <input type="checkbox" id="ck3-dst" value="3">
+                        </div>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="sel">Province:</label>
+                        <select id="sel" data-native-menu="false" multiple="multiple">
+                            <option value="1">Rio-ed</option>
+                            <option value="2">Lampang</option>
+                            <option value="3">Chonburi</option>
+                            <option value="4">Nonthaburi</option>
+                            <option value="5">Pratumtani</option>
+                        </select>
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txt-color">color:</label>
+                        <input type="color" id="txt-color">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="frm-booking">
+            <header data-role="header" data-add-back-btn="true" data-back-btn-text="กลับ">
+                <h1 class="page-header"> จองที่นั่ง </h1>
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </header>
+            <div data-role="content">
+                <form id="frm2">
+                    <div class="ui-field-contain">
+                        <label for="txtemail">Email</label>
+                        <input type="email" id="txtemail" placeholder="กรุณากรอก อีเมล์" data-clear-btn="true" data-mini="true">
+                    </div>
+                    <div class="ui-field-contain">
+                        <label for="txtpwd">Password:</label>
+                        <input type="password" id="txtpwd" placeholder="กรุณากรอก รหัสผ่าน" data-clear-btn="true" data-mini="true">
+                    </div>
+                    <!--                    <input type="button" value="Login" data-icon="lock">-->
+                    <a href="#register" data-role="button" data-icon="lock">Login</a>
+                </form>
+            </div>
+        </div>
+        <div data-role="page" id="register">
+            <header data-role="header" data-add-back-btn="true" data-back-btn-text="กลับ">
+                <h1 class="page-header"> Register </h1>
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </header>
+            <div data-role="content">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"></div>
+                    <div class="ui-block-b" id="custom-border-radius">
+                        <img src="images/developer.jpg" class="ui-corner-all" width="150" height="150"/>
+                        <h5>prin.baac@gmail.com</h5>
+                    </div>
+                    <div class="ui-block-c"></div>
+                </div>
+                <a href="#listview" data-role="button">OK</a>
+            </div>
+        </div>
+        <div data-role="page" id="listview">
+            <header data-role="header" data-add-back-btn="true" data-back-btn-text="กลับ" data-theme="b">
+                <h1 class="page-header"> List View </h1>
+                <a href="#home" data-role="button" data-icon="home" data-iconpos="notext" class="ui-btn-right">Home</a>
+            </header>
+            <div data-role="content">
+                <ul data-role="listview" data-inset="true" id="lv1">
+                    <li><a>hello</a></li>
+                </ul>
+                <form class="ui-filterable">
+                    <input id="autoc-input" type="search">
+                </form>
+                <ul data-role="listview" data-filter="true" data-filter-reveal="true" data-input="#autoc-input" data-inset="true">
+                    <li><a>กรุงเทพฯ</a></li>
+                    <li><a>นนทบุรี</a></li>
+                    <li><a>กระบี่</a></li>
+                    <li><a>นครนายก</a></li>
+                    <li><a>นครสวรรค์</a></li>
+                </ul>
+                <div data-role="collapsible-set">
+                    <div data-role="collapsible">
+                        <h2>List #1</h2>
+                        <ui data-role="listview" data-inset="false" data-autodividers="true">
+                            <li data-icon="forward"><a href="">Ant</a></li>
+                            <li data-role="list-divider">------------------</li>
+                            <li><a>Bat</a></li>
+                            <li data-icon="false"><a>Cat</a></li>
+                        </ui>
+                    </div>
+                    <div data-role="collapsible">
+                        <h2>List #2</h2>
+                        <ol data-role="listview" data-split-icon="carat-d" data-filter="true" data-filter-placeholder="ชนิดที่นั่ง">
+                            <li data-filertext="business" data-icon="false">
+                                <a href="#img_business" data-rel="dialog">
+                                    <img src="images/business_seat.jpg">
+                                    <h2 class="custome-seat">Business Seat</h2>
+                                    <h3 class="custom-price">150$</h3>
+                                    <p class="ui-li-aside ui-li-count">5</p>
+                                </a>
+                            </li>
+                            <li data-filtertext="economy" data-icon="false">
+                                <a href="#img_korea" data-rel="dialog">
+                                    <img src="images/korea_seat.jpg">
+                                    <h2 class="custome-seat">Korea Seat</h2>
+                                    <h3 class="custom-price">50$</h3>
+                                    <p class="ui-li-aside ui-li-count">15</p>
+                                </a>
+                            </li>
+                            <li data-filtertext="economy" data-icon="false">
+                                <a href="#img_china" data-rel="dialog">
+                                    <img src="images/china_seat.jpg">
+                                    <h2 class="custome-seat">China Seat</h2>
+                                    <h3 class="custom-price">70$</h3>
+                                    <p class="ui-li-aside ui-li-count">12</p>
+                                </a>
+                            </li>
+                            <li data-filtertext="economy" data-icon="false">
+                                <a href="#img_italy" data-rel="dialog">
+                                    <img src="images/italy_seat.jpg">
+                                    <h2 class="custome-seat">Italy Seat</h2>
+                                    <h3 class="custom-price">40$</h3>
+                                    <p class="ui-li-aside ui-li-count">13</p>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-role="page" id="img_business">
+            <div data-role="header">
+                <h2 class="custome-seat">Business Seat</h2>
+                <h3 class="custom-price">150$</h3>
+            </div>
+            <div data-role="content">
+                <img src="images/business_seat.jpg">
+            </div>
+        </div>
+        <div data-role="page" id="img_korea">
+            <div data-role="header">
+                <h2 class="custome-seat">Korea Seat</h2>
+                <h3 class="custom-price">50$</h3>
+            </div>
+            <div data-role="content">
+                <img src="images/korea_seat.jpg">
+            </div>
+        </div>
+        <div data-role="page" id="img_china">
+            <div data-role="header">
+                <h2 class="custome-seat">China Seat</h2>
+                <h3 class="custom-price">70$</h3>
+            </div>
+            <div data-role="content">
+                <img src="images/china_seat.jpg">
+            </div>
+        </div>
+        <div data-role="page" id="img_italy">
+            <div data-role="header">
+                <h2 class="custome-seat">Italy Seat</h2>
+                <h3 class="custom-price">40$</h3>
+            </div>
+            <div data-role="content">
+                <img src="images/italy_seat.jpg">
+            </div>
+        </div>
+        <script type="text/javascript">
+            /*   $(document).on("pageinit","#home",function () {
+             alert("Home init");
+             });
+             $(document).on("pageshow","#home",function () {
+             alert("Home show");
+             });
+             $(document).on("pagebeforeshow","#home",function (){
+             alert("Home beforeshow");
+             });
+             $(document).on("pageinit","#aboutus",function () {
+             alert("AB init");
+             });
+             $(document).on("pageshow","#aboutus",function () {
+             alert("AB show");
+             });
+             */
+
+            var BService_url = "http://127.0.0.1/speedtrain_services/branch_list.php";
+            var branchs;
+            $("#listview").on("pageinit", function () {
+                $("#lv1 li").remove();
+            });
+            $("#listview").on("pagebeforeshow", function () {
+                $.getJSON(BService_url,function(data) {
+                    $("#lv1 li").remove();
+                    branchs=data.items;
+                    $.each(branchs,function (index,branch) {
+                        //alert(branch);
+                        $("#lv1").append("<li><a>"+branch.branch_name+"</a></li>");
+                    }); // End each
+                    $("#lv1").listview("refresh");
+                }); // End getJSON
+            }); // End on
+        </script>
+    </body>
+</html>
